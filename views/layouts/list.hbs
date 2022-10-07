@@ -1,0 +1,23 @@
+<div >
+	{{#if productos}}
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Image</th>
+            </tr>
+		    {{#each productos}}
+			    <tr>
+                    <td>{{this.nombre}}</td>
+                    <td>{{this.precio}}</td>
+                    <td>
+                        <img src={{this.imagen}} style="width: 50px;"></img>
+                    </td>
+                </tr>
+		    {{/each}}
+        </table>
+	{{else}}
+		<span>There's no items</span>
+	{{/if}}
+</div>
+    <a href="/" >Add Item</a>
